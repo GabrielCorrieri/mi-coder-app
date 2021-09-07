@@ -1,12 +1,30 @@
-const NavBar = () => {
+import Button from "./Button"
 
+const NavBar = (props) => {
+console.log(props)
+  let miVariable = 'Home'
+
+  const miFuncion = () => {
+    miVariable = 'About'
+  }
     return (
-    <div>
-     <img src= ""/>
-     <button style={{color:'red'}}>Inicio</button>
-     <button>Tienda</button>
-     <button>Contacto</button>
-    </div>
+      <nav className= 'NavBar'>
+        <div className='LeftNav'>
+          <div className='navOptionsLefts'>
+            <Container user='anonimo'>
+              <miButton className= 'Option' label={miVariable} loquequiera={miFuncion}/>
+            </Container>
+            <button className='Option'> Favourites</button>
+          </div>
+        </div>
+        <div className='RightNav'>
+        <div className='navOptionsLefts'>
+        <button className='Option'> Singin</button>
+        <button className='Option'> Singup</button>
+        </div>
+        </div>
+        <CartWidget.js/>
+        </nav>
     )
   }
 

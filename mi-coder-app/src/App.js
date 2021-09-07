@@ -1,14 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-
+import Button from './components/Button';
+import Container from './components/Container';
 const App = () => {
+
+  const HandleClick = () =>{
+    console.log ('oks')
+  }
   return (
     <div className="App">
       <header className="App-header">
         <NavBar/>
         <img src={logo} className="App-logo" alt="logo"/>
+        <Button loquequiera={()=> console.log('button uno')} label= 'Boton 1'/>
+        <Button loquequiera={HandleClick} label='Boton 2'/>
       </header>
+      <ItemListContainer/>
       <h2>Ofertas del mes</h2>
     </div>
   )
