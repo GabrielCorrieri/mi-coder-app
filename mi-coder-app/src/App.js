@@ -1,6 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
+const App = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <NavBar/>
+        <img src={logo} className="App-logo" alt="logo"/>
+      </header>
+      <h2>Ofertas del mes</h2>
+    </div>
+  )
+}
+
+const Titulo = (props) => {
+  console.log (props.name);
+  return <h1 style= {{color: 'red'}}>Hola{FirstName} </h1>
+}
+
+const App = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Titulo FirstName="Gabi"/>
+        <img src={logo} className="App-logo" alt="logo"/>
+      </header>
+    </div>
+  );
+}
+
+export default App;
 function App() {
 
 
